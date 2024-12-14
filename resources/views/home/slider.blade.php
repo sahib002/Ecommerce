@@ -9,10 +9,10 @@
                     <div class="detail-box"> 
                       <h1>
                         Welcome To Our <br>
-                        E-commerce Site!
+                        Gift Shop
                       </h1>
                       <p>
-                        Looking for the perfect place to buy and sell? Step into a world where great deals meet endless possibilities. Discover Deals, Deliver Dreams—All in One Place!
+                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
                       </p>
                       <a href="">
                         Contact Us
@@ -21,7 +21,7 @@
                   </div>
                   <div class="col-md-5 ">
                     <div class="img-box">
-                      <img style="width:600px" src="images/frontpic.jpg" alt="" />
+                      <img style="width:600px" src="images/image3.jpeg" alt="" />
                     </div>
                   </div>
                 </div>

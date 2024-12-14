@@ -19,7 +19,7 @@
                 <h6>
                   Price
                   <span>
-                    500 Tk
+                    $200
                   </span>
                 </h6>
               </div>
@@ -44,7 +44,7 @@
                 <h6>
                   Price
                   <span>
-                    1400 Tk
+                    $300
                   </span>
                 </h6>
               </div>
@@ -69,7 +69,7 @@
                 <h6>
                   Price
                   <span>
-                    600 Tk
+                    $110
                   </span>
                 </h6>
               </div>
@@ -94,7 +94,7 @@
                 <h6>
                   Price
                   <span>
-                    900 Tk
+                    $45
                   </span>
                 </h6>
               </div>
@@ -119,7 +119,7 @@
                 <h6>
                   Price
                   <span>
-                    450 Tk
+                    $95
                   </span>
                 </h6>
               </div>
@@ -144,7 +144,7 @@
                 <h6>
                   Price
                   <span>
-                    1600 Tk
+                    $70
                   </span>
                 </h6>
               </div>
@@ -169,7 +169,7 @@
                 <h6>
                   Price
                   <span>
-                    1900 Tk
+                    $400
                   </span>
                 </h6>
               </div>
@@ -194,7 +194,7 @@
                 <h6>
                   Price
                   <span>
-                    480 Tk
+                    $450
                   </span>
                 </h6>
               </div>

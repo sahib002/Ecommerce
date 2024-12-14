@@ -2,7 +2,7 @@
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
           <span>
-            E-commerce Manager
+            Giftos
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,15 +34,6 @@
             </li>
           </ul>
           <div class="user_option">
-
-
-            <a href="{{url('/register')}}">
-              <i class="fa fa-vcard" aria-hidden="true"></i>
-              <span>
-               Register
-              </span>
-            </a>
-
             <a href="{{url('/login')}}">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span>
@@ -50,6 +41,12 @@
               </span>
             </a>
 
+            <a href="{{url('/register')}}">
+              <i class="fa fa-vcard" aria-hidden="true"></i>
+              <span>
+              Register
+              </span>
+            </a>
 
             <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>

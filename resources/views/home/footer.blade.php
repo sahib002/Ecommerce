@@ -1,3 +1,4 @@
+
 <section class="info_section  layout_padding2-top">
     <div class="social_container">
       <div class="social_box">
@@ -23,7 +24,7 @@
               ABOUT US
             </h6>
             <p>
-             Our mission is simple: to provide a platform that makes shopping and selling effortless, enjoyable, and rewarding for everyone. Whether you're looking to snag great deals on unique products or sell your items with ease, we’ve got you covered.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -44,7 +45,7 @@
               NEED HELP
             </h6>
             <p>
-              We're here to make your experience smooth and hassle-free. If you have questions or need assistance, our dedicated support team is ready to help.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -58,7 +59,7 @@
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+880 1342134561</span>
+                <span>+01 12345678901</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -74,7 +75,7 @@
       <div class="container">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://www.free-css.com/free-css-templates">NoobGroup</a>
+          <a href="https://html.design/">Web Tech Knowledge</a>
         </p>
       </div>
     </footer>
