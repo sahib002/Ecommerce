@@ -39,10 +39,10 @@ class ConfirmablePasswordController extends Controller
 
         $request->session()->put('auth.password_confirmed_at', time());
 
-<<<<<<< HEAD
+
         return redirect()->intended(RouteServiceProvider::HOME);
-=======
+
         return redirect()->intended(route('dashboard', absolute: false));
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
+ 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
     }
 }

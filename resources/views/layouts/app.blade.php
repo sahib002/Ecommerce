@@ -19,21 +19,13 @@
             @include('layouts.navigation')
 
             <!-- Page Heading -->
-<<<<<<< HEAD
-            @if (isset($header))
-=======
             @isset($header)
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
-<<<<<<< HEAD
-            @endif
-=======
             @endisset
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
 
             <!-- Page Content -->
             <main>

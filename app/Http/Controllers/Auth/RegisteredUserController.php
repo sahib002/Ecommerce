@@ -4,10 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-<<<<<<< HEAD
-use App\Providers\RouteServiceProvider;
-=======
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -51,10 +47,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-<<<<<<< HEAD
-        return redirect(RouteServiceProvider::HOME);
-=======
         return redirect(route('dashboard', absolute: false));
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
     }
 }

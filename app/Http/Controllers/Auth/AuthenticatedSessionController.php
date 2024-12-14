@@ -4,10 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-<<<<<<< HEAD
-use App\Providers\RouteServiceProvider;
-=======
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,15 +28,15 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-<<<<<<< HEAD
+
         if ($request->user()->usertype === 'admin') #condition 
         {
             return redirect('admin/dashboard'); 
-=======
+
         if ($request->user()->usertype==='admin')
         {
              return redirect('admin/dashboard');
->>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
+
         }
 
         return redirect()->intended(route('dashboard'));
