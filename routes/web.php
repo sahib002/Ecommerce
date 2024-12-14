@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
+=======
+route::get('/',[HomeController::class,'home']);
+>>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,6 +36,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+<<<<<<< HEAD
 
 
 route::get('admin/dashboard',[HomeController::class,'index']);
+=======
+route::get('admin/dashboard',[HomeController::class,'index'])->
+      middleware(['auth','admin']);
+>>>>>>> 87315c8b80b581c7c133bd3357ba2fc416cbc8eb
