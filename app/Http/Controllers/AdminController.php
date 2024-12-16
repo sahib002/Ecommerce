@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\category;
 
+use App\Models\Product;
 
 class AdminController extends Controller
 {
@@ -55,5 +56,50 @@ class AdminController extends Controller
         toastr()->timeout(5000)->closeButton()->addSuccess('Category Updated Successfully');
         
         return redirect('/view_category');
+    }
+
+    public function add_product(){
+        $category = category::all();
+
+        return view('admin.add_product',compact('category'));
+    }
+
+    public function upload_product(Request $request){
+        $data = new Product;
+        $data -> title = $request->title; 
+        $data -> description = $request->description; 
+        $data -> price = $request->price;
+        $data -> quantity = $request->qty; 
+        $data -> category = $request->category;   
+
+        $image = $request->image;
+        if($image)
+        {
+            $imagename = time().'.'.$image-> getClientOriginalExtension();
+            $request->image->move('products',$imagename);
+            $data -> image = $imagename;
+        }
+        toastr()->timeout(5000)->closeButton()->addSuccess('Producted uploaded Successfully');
+        
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function view_product(){
+        $product = Product::paginate(10);
+        return view('admin.view_product',compact('product'));
+    }
+
+    public function delete_product($id){
+        $data = Product::find($id);
+
+        $image_path = public_path('products/'.$data->image);
+
+        if(file_exists( $image_path)){
+            unlink( $image_path);
+        }
+
+        $data->delete();
+        return redirect()->back();
     }
 }
