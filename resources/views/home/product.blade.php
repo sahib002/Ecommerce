@@ -6,211 +6,42 @@
         </h2>
       </div>
       <div class="row">
+
+      
+      @foreach($product as $products)
+
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
+           
               <div class="img-box">
-                <img src="images/p1.png" alt="">
+                <img src="products/{{$products->image}}" alt="">  <!-- nabo: fetching from product table of the ecommerce_project database -->
               </div>
               <div class="detail-box">
+                <h6>{{$products->title}}</h6> <!-- nabo: fetching from product table of the ecommerce_project database -->
                 <h6>
-                  Ring
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    500 Tk
-                  </span>
-                </h6>
+                  Price   
+                  <span>{{$products->price}}</span>
+                </h6>                            <!-- nabo: fetching from product table of the ecommerce_project database -->
               </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
+             
+              <div style="padding:15px"> <!-- nabo: adds details button to the product viewing section -->
+
+                  <a class="btn btn-danger" href="
+                  {{url('product_details',$products->id)}}">Details</a>
+
+
+                  <a class="btn btn-primary" href="{{url('add_cart',$products->id)}}">Add to Cart</a>
+
+              </div> 
+
+
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p2.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Watch
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    1400 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Teddy Bear
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    600 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Flower Bouquet
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    900 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p5.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Teddy Bear
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    450 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p6.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Flower Bouquet
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    1600 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p7.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Watch
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    1900 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/p8.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Ring
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                    480 Tk
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
+
+      @endforeach
+       
+       
       </div>
-      <div class="btn-box">
-        <a href="">
-          View All Products
-        </a>
-      </div>
+      
     </div>
   </section>
