@@ -1,115 +1,100 @@
-<!DOCTYPE html> <!-- ITEMS ADDED TO AN INDIVIDUAL USERS CART ARE SHOWN HEREEEE : NABO -->
+<!DOCTYPE html>
 <html>
 
 <head>
   @include('home.css')
   <style type="text/css">
-.div_deg{
-    display:flex;
-    justify-content:center ;
-    align-item: center;
-    margin: 60px;
+    .div_deg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 60px;
+    }
 
-}
+    table {
+      border: 2px solid black;
+      text-align: center;
+      width: 800px;
+    }
 
-table
-{
-    border:2px solid black;
-    text-align: center;
-    width: 800px;
+    th {
+      border: 2px solid black;
+      text-align: center;
+      color: white;
+      font: 20px;
+      font-weight: bold;
+      background-color: skyblue;
+    }
 
-}
+    td {
+      border: 1px solid skyblue;
+    }
 
-th
-{
-    border:2px solid black; 
-    text-align: center;
-    color: white;
-    font: 20px;
-    font-weight: bold;
-    background-color: skyblue;
-
-}
-td 
-{
-   border:1px solid skyblue;
-}
-
-.cart_value
-{
-    text-align:center;
-    margin-bottom: 70px;
-    padding:18px;
-}
-
+    .cart_value {
+      text-align: center;
+      margin-bottom: 70px;
+      padding: 18px;
+    }
   </style>
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
     @include('home.header')
-    <!-- end header section -->
-  
   </div>
 
   <div class="div_deg">
     <table>
-   <tr>
-     <th> 
-Product Title
-    </th>
+      <tr>
+        <th>Product Title</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Image</th>
+        <th>Remove</th>
+      </tr>
 
-    <th> 
- Price
-    </th>
+      <?php $totalCartValue = 0; ?>
 
-    <th> 
- Image
-    </th>
+      <!-- Group cart items by product_id -->
+      @foreach($cart->groupBy('product_id') as $productId => $groupedItems)
+      @php
+        $firstItem = $groupedItems->first(); // Get the first cart item in the group
+        $product = $firstItem->product; // Get the product details
+        $productPrice = $product->price ?? DB::table('products')->where('id', $productId)->value('price'); // Fetch price if missing
+        $totalQuantity = $groupedItems->count(); // Total items of this product in cart
+        $totalPrice = $productPrice * $totalQuantity; // Calculate total price for the product
+      @endphp
 
-    <th> 
-Remove
-    </th>
-</tr>
-<?php
-    $value=0;
-?>
-       @foreach($cart as $cart)
+      <tr>
+        <!-- Product Title -->
+        <td>{{ $product->title ?? 'Unknown Product' }}</td>
 
+        <!-- Total Price -->
+        <td>{{ $totalPrice }}</td>
 
-  <tr> 
-    <td> 
-        {{$cart->product->title}}
-    </td>
+        <!-- Total Quantity -->
+        <td>{{ $totalQuantity }}</td>
 
-    <td> 
-        {{$cart->product->price}}
-    </td>
+        <!-- Product Image -->
+        <td>
+          <img width="150" src="/products/{{ $product->image ?? 'default.png' }}" alt="{{ $product->title }}">
+        </td>
 
-    <td> 
-       <img width="150" src="/products/{{$cart->product->image}}">
-    </td>
-    <td> 
-       <a class="btn btn-danger" href="{{url('delete_cart', $cart->id)}}">Remove</a>
-    </td>
-  </tr>
-  <?php
-  $value=$value +  $cart->product->price;   #adds all the product prices within a cart and givees total : Nabo
-  ?>
-   @endforeach
- </table>
-</div>
+        <!-- Remove Button -->
+        <td>
+          <a class="btn btn-danger" href="{{ url('delete_cart', $firstItem->id) }}">Remove</a>
+        </td>
+      </tr>
 
-<div class="cart_value">
-     <h3> Total Value of Cart is: Taka {{ $value}}</h3>
+      <?php $totalCartValue += $totalPrice; ?>
+      @endforeach
+    </table>
+  </div>
 
-</div>
+  <div class="cart_value">
+    <h3>Total Value of Cart is: Taka {{ $totalCartValue }}</h3>
+  </div>
 
-
-   
-
-  <!-- info section -->
   @include('home.footer')
 </body>
 

@@ -33,6 +33,16 @@
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
+
+
+     <!-- Search Bar Start -->
+     <form action="{{ route('search') }}" method="GET" class="form-inline my-2 my-lg-0 ml-auto">
+        <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search products..." aria-label="Search" required>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <!-- Search Bar End -->
+
+
           <div class="user_option">
            @if (Route::has('login'))
              @auth

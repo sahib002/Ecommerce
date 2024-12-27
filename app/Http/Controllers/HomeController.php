@@ -108,4 +108,15 @@ public function product_details($id)
     }
     return view('home.mycart',compact('count','cart'));
  }
+
+
+ public function search(Request $request)
+{
+    $query = $request->input('query'); #Get the search term from the request
+    $product = Product::where('title', 'LIKE', "%{$query}%")->get(); #Search products by title
+
+    return view('home.product', compact('product')); # Return the updated product view  (Nabo)
+}
+
+
 }

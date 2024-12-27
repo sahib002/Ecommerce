@@ -852,5 +852,60 @@ a:focus {
   color: #cbc9c9;
 }
 
+
+/* Product Image Styling */
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.product-image {
+  max-width: 100%; /* Ensure it fits within the box */
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+/* Button Styling */
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+
+.add-to-cart-btn,
+.details-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff; /* Blue */
+  color: #fff;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3; /* Darker Blue */
+}
+
+.details-btn {
+  background-color: #dc3545; /* Red */
+  color: #fff;
+}
+
+.details-btn:hover {
+  background-color: #c82333; /* Darker Red */
+}
+
+
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
